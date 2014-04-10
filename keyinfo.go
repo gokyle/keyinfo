@@ -84,6 +84,9 @@ func printRSAKey(key *rsa.PrivateKey) {
 	}
 	fmt.Printf("D: %x\n", key.D.Bytes())
 	fmt.Printf("N: %x\n", key.N.Bytes())
+	for _, p := range key.Primes {
+		fmt.Printf("Prime: %x\n", p.Bytes())
+	}
 }
 
 func dumpECKey(der []byte) (err error) {
