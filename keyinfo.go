@@ -83,7 +83,7 @@ func printRSAKey(key *rsa.PrivateKey) {
 		return
 	}
 	fmt.Printf("D: %x\n", key.D.Bytes())
-	fmt.Printf("E: %x\n", key.N.Bytes())
+	fmt.Printf("N: %x\n", key.N.Bytes())
 }
 
 func dumpECKey(der []byte) (err error) {
