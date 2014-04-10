@@ -111,4 +111,10 @@ func printECKey(key *ecdsa.PrivateKey) {
 	default:
 		fmt.Println("unknown")
 	}
+	if !verbose {
+		return
+	}
+	fmt.Printf("D: %x\n", key.D.Bytes())
+	fmt.Printf("X: %x\n", key.X.Bytes())
+	fmt.Printf("Y: %x\n", key.Y.Bytes())
 }
